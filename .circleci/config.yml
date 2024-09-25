@@ -31,7 +31,7 @@ lint_code:
         command: npm run build
 
 workflows:
-  build_app:
+  build_library:
     jobs:
       - lint_code
       - run_tests
