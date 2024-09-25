@@ -30,3 +30,9 @@ lint_code:
         name: Build
         command: npm run build
 
+workflows:
+  build_app:
+    jobs:
+      - lint_code
+      - run_tests
+      - build
