@@ -1,0 +1,32 @@
+version: 2.1
+orbs:
+  node: circleci/node@5.0.2
+jobs:
+lint_code:
+  executor: node/default
+  description: Lint code
+  steps:
+    - checkout
+    - node/install-packages:
+    - run:
+      name: Lint code
+      command: npm run lint:fix
+  run_tests:
+    executor: node/default
+    description: Run tests
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+        name: Run tests
+        command: npm run test
+  build:
+  executor: node/default
+  description: Build
+    steps:
+      - checkout
+      - node/install-packages
+      - run: 
+        name: Build
+        command: npm run build
+
