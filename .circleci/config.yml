@@ -36,8 +36,8 @@ workflows:
     jobs:
       - lint_code
       - run_tests:
-        requires:
-          - lint_code
+          requires:
+            - lint_code
       - build:
-        requires:
-          - run_tests
+          requires:
+            - run_tests
