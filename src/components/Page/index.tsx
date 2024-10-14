@@ -1,5 +1,5 @@
-import React from "react";
-import { PageProps } from "./types";
+import React from 'react';
+import { PageProps } from './types';
 
 const Page: React.FC<PageProps> = ({ title, children }) => (
   <>
